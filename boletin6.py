@@ -24,7 +24,6 @@ else:
 
 print("------") 
 
-
 print("Ejercicio 3: ")
 
 numbers = int(input("How many numbers do you want input?"))
@@ -84,12 +83,17 @@ print("Ejercicio 6: ")
 numberA = int(input("Enter one number: "))
 numberB = int(input("Enter one number: "))
 
-
-valores =[]  
-for n in range(1,numberB + 1):
-    valores.append(numberA)
-suma = sum(valores)  
-print(suma)  
+contador = 0
+suma = 0
+if numberB >0:
+    while contador < abs(numberB):
+        suma += numberA
+        contador += 1
+elif numberB < 0:
+    while contador < abs(numberB):
+        suma -= numberA
+        contador += 1
+print(suma)
 
 
 print("--------")
@@ -227,7 +231,7 @@ contador = 1
 cuenta = 10
 total = 10
 
-while contador <= 20:
+while contador < 20:
     cuenta *= 2
     total += cuenta
     contador += 1
@@ -235,7 +239,7 @@ while contador <= 20:
 print("El total es " + str(total))
 
 print("--------")
-'''
+
 
 print("Ejercicio 21: ")
 
@@ -248,7 +252,7 @@ for n in range(1,numero+1):
         if n%n==0 and n%1==0 and not(n%i==0):
             print(n)
         
-
+'''
 
 
     
