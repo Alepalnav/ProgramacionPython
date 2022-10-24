@@ -1,2 +1,2 @@
 # BoletinesProg
-Todos los boletines de la asignatura de programación.
+Todos los boletines de Python de la asignatura de programación.
