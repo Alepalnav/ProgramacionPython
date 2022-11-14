@@ -27,7 +27,6 @@ else:
     print("El resto es 0")
         
 print("--------")
-
 print("Ejercicio 2: ")
 
 num1 = int(input("Introduzca un numero: "))
@@ -120,13 +119,14 @@ print(cadena)
 print("-----")
 '''
 print("Ejercicio 5: ")
+'''
 
 n = int(input("Dime un numero: "))
 cadena = ""
 contador = 1
-while contador <= 10:
+while contador <= 20:
     cadena += str(n)
-    if contador != 10:
+    if contador != 20:
         cadena+= "-->"
     if n%2==0:
         n = n//2
@@ -134,14 +134,85 @@ while contador <= 10:
         n = (3*n)+1
     contador += 1
     if n == 1:
-        contador = 10
+        contador = 20
         n = 1
 print(cadena)
+'''
+n1 = int(input("Dime un numero: "))
+cadena1 = ""
+contador = 1
+while contador <= 20:
+    cadena1 += str(n1)
+    if contador != 20:
+        cadena1+= "-->"
+    if n1%2==0:
+        n1 = n1//2
+    elif n1%2==1:
+        n1 = (3*n1)+1
+    contador += 1
+    if n1 == 1:
+        contador = 20
+        n1 = 1
+print(cadena1)
 
 print("------")
 
+numero = int(input("Dime un numero: "))
+num2 = int(input("Dime un numero: "))
+
+lista = [numero]
+
+while not (numero==1):
+    if numero % 2 == 0:
+        numero = numero//2
+    else:
+        numero = numero*3+1
+        
+    lista.append(numero)
+
+print(lista)
+print(len(lista))
+
+
+lista2 = [num2]
+
+while not (num2==1):
+    if num2 % 2 == 0:
+        num2 = num2//2
+    else:
+        num2 = num2*3+1
+        
+    lista2.append(num2)
+
+print(lista2)
+print(len(lista2))
+
+print(len(lista)==len(lista2))
+print("--"*10)
+
 print("Ejercicio 6: ")
 
+numero = int(input("Dime el año: "))
+contador = 1
+puzzle = 0
+puzzleAcumulado = 0
+dinero = 20
+dineroacumulado=dinero+15
+
+while contador <= numero:
+    if contador == 1:
+        puzzle+=1
+        puzzleAcumulado+=1
+    if contador%2==1 and not(contador==1):
+        puzzle+=puzzleAcumulado*2
+    elif contador%2==0:
+        dinero+=dineroacumulado
+    puzzleAcumulado=puzzle
+    contador+=1
+print(puzzle)
+print(dinero)         
+
+'''
 
 
 

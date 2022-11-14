@@ -148,7 +148,7 @@ else:
     print("The number is not perfect")    
     
 
- 
+'''
 print("Ejercicio 10: ")
 
 number = int(input("Enter an integer positive number: "))
@@ -166,7 +166,7 @@ while number < 0:
     number -= 1   
 print(contador)       
     
-
+'''
 
 
 
