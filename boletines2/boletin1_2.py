@@ -113,7 +113,7 @@ print(leerNumerosPar())
 
 print("Ejercicio 5: ")
 
-lista = [1,2,3,4,5]
+lista = ["hola",2,3,4,5]
 
 def reverse(lista):
     n = 0
@@ -128,13 +128,13 @@ print(reverse(lista))
 
 print("Ejercicio 6:")
 
-lista = [2,3,4,5,6]
+lista = [2,3,7,9,15]
 
 def estaOrdenada(lista):
     n = 1
     prueba = 0
     while n < len(lista):
-        if lista[n] == lista[n-1]+1: 
+        if lista[n] > lista[n-1]: 
             prueba += 1   
         n += 1
     return prueba == 4
@@ -155,7 +155,9 @@ def encajan(ficha1, ficha2):
         
 print(encajan(ficha1, ficha2))
         
-'''
+
+
+
 
 print("Ejercicio 8: ")
 
@@ -165,12 +167,196 @@ numero = int(input("Dime un numero: "))
 while numero > 0:
     lista.append(numero)
     numero = int(input("Dime un numero: "))
+def numero_primos(n):
+    es_primo = True
+    for i in range(2,n):
+        if n%i == 0:
+            es_primo = False
+    return es_primo
 
-def primos(lista):
+primos = []
+for elemento in lista:
+    if numero_primos(elemento):
+        primos.append(elemento)
+
+print(primos)
+
+def sumatorio(lista):
+    suma = 0
     for i in lista:
-        if i 
+        suma += i
+    return suma
 
-print(primos(lista))
+print(sumatorio(lista))
+
+def promedio(lista):
+    suma = 0
+    for i in lista:
+        suma += i 
+    media = suma//len(lista)
+    return media
+
+print(promedio(lista))
+def factorial(n):
+    fac = 1
+    for i in range(1,n+1):
+        fac *= i
+    return fac
+
+listaFactorial = []
+for elemento in lista:
+    listaFactorial.append(factorial(elemento))
+    
+print(listaFactorial)
 
 
+print("Ejercicio 9: ")
 
+lista = [1,4,2,5,6]
+k = 5
+
+def menores(lista,k):
+    menor = []
+    for i in lista:
+        if i < k:
+            menor.append(i)
+    return menor
+
+print(menores(lista, k))
+            
+def mayores(lista,k):
+    mayor = []
+    for i in lista:
+        if i > k:
+            mayor.append(i)
+    return mayor
+
+print(mayores(lista, k))
+
+def multiplos(lista,k):
+    multiplo = []
+    for i in lista:
+        if i%k == 0:
+            multiplo.append(i)
+    return multiplo
+
+print(multiplos(lista, k))
+'''
+print("Ejercicio 10: ")
+
+numero = "101101B"
+
+def conversor(numero):
+    lista2 = []
+    if numero[-1] == "B":
+        numero = numero[0:len(numero)-1]
+        for i in numero:
+            if int(i) > 1:
+                assert Exception("Los numeros binarios no son mayores que 1")
+        n = 0
+        for n in numero:
+            lista2.append(n)
+        x = 0
+        y = len(lista2)-1
+        producto = 0
+        while x < len(lista2):
+            producto += int(lista2[x]) * (2 ** y)
+            x += 1
+            y -= 1
+        return producto
+    if numero[-1] == "D":
+        numero = numero[0:len(numero)-1]
+        for i in numero:
+            if not (0<=int(i)<9):
+                assert Exception("La base decimal debe ser entre 0 y 9")
+        numero = int(numero)
+        binario = 0
+        multiplicador = 1
+        while numero != 0:
+            binario += numero % 2 * multiplicador
+            numero //= 2
+            multiplicador *= 10
+        return binario
+print(conversor(numero))
+'''
+print("Ejercicio 11: ")
+
+lista1 = [1,4,5,6]
+lista2 = [4,5,7,1,1]
+
+def intersect(lista1,lista2):
+    lista3 = []
+    for i in lista1:
+        if i in lista2:
+            lista3.append(i) 
+    return lista3
+
+print(intersect(lista1, lista2))
+
+print("Ejercicio 12: ")
+
+lista1 = [1,3,4,6]
+lista2 = [1,2,4,7]
+
+def unionLista(lista1,lista2):
+    lista3 = []
+    for i in lista2:
+        lista3.append(i)
+    for i in lista1:
+        if i not in lista2:
+            lista3.append(i)
+    lista3.sort()
+    return lista3
+
+print(unionLista(lista1, lista2))
+
+            
+print("Ejercicio 13: ")
+
+listaNombres = ["Alejandro", "Alvaro", "Paco"]
+letra = "A"
+
+def nombresLetra(listaNombres, letra):
+    lista3 = []
+    for i in listaNombres:
+        if letra == i[0]:
+            lista3.append(i)
+    return lista3
+
+print(nombresLetra(listaNombres, letra))
+        
+
+
+print("Ejercicio 14: ")
+
+lista = ["hola", "ordenador", "mundo","hxla", "ordenados"]
+
+def compararLista(lista):
+    elemento = lista[0]
+    mayor = []
+    for i in lista:
+        if len(i) == len(elemento):
+            palabra1 = []
+            palabra2 = []
+            cantidad1 = []
+            cantidad2 = []
+            for x in i:
+                if x in palabra1:
+                    cantidad1.append(x)
+                palabra1.append(x)
+            for y in elemento:
+                if y in palabra2:
+                    cantidad2.append(y)
+                palabra2.append(y)
+            if len(cantidad1) > len(cantidad2):
+                mayor = [i] 
+            elif len(cantidad2) > len(cantidad1):
+                mayor = [elemento]                      
+        if len(i) > len(elemento):
+            elemento = i
+            mayor = [i]
+    return mayor
+
+print(compararLista(lista))
+
+'''
