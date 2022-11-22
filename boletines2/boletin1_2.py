@@ -326,7 +326,7 @@ def nombresLetra(listaNombres, letra):
 print(nombresLetra(listaNombres, letra))
         
 
-
+'''
 print("Ejercicio 14: ")
 
 lista = ["hola", "ordenador", "mundo","hxla", "ordenados"]
@@ -359,4 +359,4 @@ def compararLista(lista):
 
 print(compararLista(lista))
 
-'''
+
