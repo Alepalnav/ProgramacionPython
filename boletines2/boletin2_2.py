@@ -38,13 +38,12 @@ def isLeapYear(year):
 print(isLeapYear(year))
 
 '''
-print("Ejercicio 3: ") #preguntar
+print("Ejercicio 3: ") 
 
 dias = [31,28,31,30,31,30,31,31,30,31,30,31]
 meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio","julio","agosto","septiembre", "octubre", "noviembre", "diciembre"]
-month = "febrer"
+month = "febrero"
 year = 2020
-
 
 def computeDaysInMonth(month, year, meses, dias):
     if (month not in meses) or (type(year) != int):
@@ -197,7 +196,7 @@ print(isFriendNumber(num1,num2))
 
 
 
-
+print("Boletin Rama Desarrollo")
 
 
 
