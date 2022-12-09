@@ -1,4 +1,4 @@
-num = -55
+num = -101011
 numeros = ["0","1","2", "3", "4","5","6","7","8","9"]
 def getNumberOfDigits(num, numeros):
     num1 = str(num)
