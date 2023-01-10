@@ -1,3 +1,4 @@
+
 nombre = "Enriqueta"
 apellido1 = "Rodriguez"
 apellido2 = "Montessori"
@@ -44,13 +45,3 @@ while 1 <= n < 6:
     elif n == 5:
         lista = ["","","","",""]
     n = int(input("Dime un numero 1-6: "))
-
-
-
-
-
-
-
-
-
-

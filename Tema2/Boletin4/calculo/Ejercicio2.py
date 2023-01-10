@@ -14,7 +14,7 @@ def mcd(n,i):
             div_com.append(z)
     return div_com[-1]
 
-print(mcd(1024,248))            
+print(mcd(24,18))            
 
 
 

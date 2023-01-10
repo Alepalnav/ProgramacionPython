@@ -1,46 +1,50 @@
 
-mensaje = '''
-1. Iniciar: 
-2. Registrarse:
-3. Mostrar usuarios:
-4. Salir:  
+menu = '''
+1. Crear cuenta: 
+2. Iniciar sesion: 
+3. Mostrar usuarios: 
+4. Salir:
 '''
- 
-usuarios = ["ale","","","","","","","","",""]
-contraseñas = ["hola","","","","","","","","",""]
 
-def usuarios_contraseña(mensaje, usuarios, contraseñas):
-    n = int(input(mensaje))
-    while n != 4:
-        if n == 1:
-            contador_login = 0
-            while contador_login < 3:
-                user = input("Dime el usuario: ")
-                for n in range(len(usuarios)):
-                    if usuarios[n] == user:
-                        contra = input("Dime la contraseña: ")
-                        if contraseñas[n]== contra:
-                            print("Inicio de sesión realizado")
-                            contador_login += 1
-                        else:
-                            print("Contraseña incorrecta")
-                    else:
-                        print("No existe este usuario.")
-        if n == 2:
-            pass
+usuarios = []
+contraseñas = []
 
+opcion = int(input(menu))
 
+while opcion != 4:
+    if opcion == 1:
+        if len(usuarios) < 10:
+            usuario = input("Escribe un usuario:")
+            if usuario not in usuarios:
+                contraseña1 = input("Escribe una contraseña: ")
+                contraseña2 = input("Vuelve a escribir la contraseña: ")
+                while contraseña1 != contraseña2:
+                    contraseña2 = input("Vuelve a escribir la contraseña: ")
+                usuarios.append(usuario)
+                contraseñas.append(contraseña1)
+            elif usuario in usuarios:
+                print("Este usuario ya existe.")
+    elif opcion == 2:
+        usuario = input("Escribe un usuario:")
+        contador = 0
+        while contador < 3:
+            if usuario in usuarios:
+                contraseña = input("Escribe la contraseña: ")
+                if contraseña in contraseñas:
+                    print("Has iniciado sesion correctamente.")
+                    contador += 3
+                else:
+                    contraseña = input("Escribe correctamente la contraseña: ")
+                    contador += 1
+            else:
+                usuario = input("Vuelva a introducir correctamente el usuario: ")
+                contador += 1
+    elif opcion == 3:
+        print(usuarios)
+    
+    opcion = int(input(menu))
 
-print(usuarios_contraseña(mensaje, usuarios, contraseñas))
-
-
-
-
-
-
-
-
-
+print("Ha salido con éxito")
 
 
 
